@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="II-TTT"
+config/icon="res://icon.png"
+
+[gui]
+
+theme/custom="res://assets/theme/Theme_Project.tres"
+theme/custom_font="res://assets/fonts/DynamicFont_KaushanScript.tres"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,150 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/FontData_KaushanScript.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/GridCell.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 1 )
+
+[node name="Main" type="Node"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+
+[node name="HSplitContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 204.0
+margin_top = 78.0
+margin_right = 820.0
+margin_bottom = 521.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+
+[node name="VBox_Player_O" type="VBoxContainer" parent="CenterContainer/HSplitContainer"]
+margin_right = 109.0
+margin_bottom = 443.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+
+[node name="Label" type="Label" parent="CenterContainer/HSplitContainer/VBox_Player_O"]
+margin_right = 109.0
+margin_bottom = 34.0
+size_flags_vertical = 1
+text = "Player O"
+
+[node name="Label2" type="Label" parent="CenterContainer/HSplitContainer/VBox_Player_O"]
+margin_top = 38.0
+margin_right = 109.0
+margin_bottom = 72.0
+size_flags_vertical = 1
+text = "Points: 0/5"
+
+[node name="Label3" type="Label" parent="CenterContainer/HSplitContainer/VBox_Player_O"]
+margin_top = 76.0
+margin_right = 109.0
+margin_bottom = 110.0
+size_flags_vertical = 1
+text = "Try to Win"
+
+[node name="VBox_Game" type="VBoxContainer" parent="CenterContainer/HSplitContainer"]
+margin_left = 113.0
+margin_right = 503.0
+margin_bottom = 443.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+
+[node name="Label" type="Label" parent="CenterContainer/HSplitContainer/VBox_Game"]
+margin_right = 390.0
+margin_bottom = 49.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_fonts/font = SubResource( 1 )
+text = "O is Placing"
+align = 1
+
+[node name="Grid" type="GridContainer" parent="CenterContainer/HSplitContainer/VBox_Game"]
+margin_top = 53.0
+margin_right = 390.0
+margin_bottom = 443.0
+custom_constants/vseparation = 3
+custom_constants/hseparation = 3
+columns = 3
+
+[node name="GridCell" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+state = 1
+
+[node name="GridCell2" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_left = 131.0
+margin_right = 259.0
+state = 2
+
+[node name="GridCell3" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_left = 262.0
+margin_right = 390.0
+state = 1
+
+[node name="GridCell4" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_top = 131.0
+margin_bottom = 259.0
+state = 1
+
+[node name="GridCell5" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_left = 131.0
+margin_top = 131.0
+margin_right = 259.0
+margin_bottom = 259.0
+state = 2
+
+[node name="GridCell6" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_left = 262.0
+margin_top = 131.0
+margin_right = 390.0
+margin_bottom = 259.0
+state = 2
+
+[node name="GridCell7" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_top = 262.0
+margin_bottom = 390.0
+state = 2
+
+[node name="GridCell8" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_left = 131.0
+margin_top = 262.0
+margin_right = 259.0
+margin_bottom = 390.0
+state = 1
+
+[node name="GridCell9" parent="CenterContainer/HSplitContainer/VBox_Game/Grid" instance=ExtResource( 3 )]
+margin_left = 262.0
+margin_top = 262.0
+margin_right = 390.0
+margin_bottom = 390.0
+state = 1
+
+[node name="VBox_Player_X" type="VBoxContainer" parent="CenterContainer/HSplitContainer"]
+margin_left = 507.0
+margin_right = 616.0
+margin_bottom = 443.0
+
+[node name="Label" type="Label" parent="CenterContainer/HSplitContainer/VBox_Player_X"]
+margin_right = 109.0
+margin_bottom = 34.0
+size_flags_vertical = 1
+text = "Player X"
+
+[node name="Label2" type="Label" parent="CenterContainer/HSplitContainer/VBox_Player_X"]
+margin_top = 38.0
+margin_right = 109.0
+margin_bottom = 72.0
+size_flags_vertical = 1
+text = "Points: 0/5"
+
+[node name="Label3" type="Label" parent="CenterContainer/HSplitContainer/VBox_Player_X"]
+margin_top = 76.0
+margin_right = 109.0
+margin_bottom = 110.0
+size_flags_vertical = 1
+text = "Try to Lose"
